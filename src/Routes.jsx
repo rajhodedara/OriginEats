@@ -1,40 +1,45 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route, Navigate } from "react-router-dom";
+import ScrollToTop from "components/ScrollToTop";
+import ErrorBoundary from "components/ErrorBoundary";
+import Coupons from "./components/coupons";
 
-// Components
-import ErrorBoundary from "./components/ErrorBoundary";
+// Shared Components & Pages
+import NotFound from "pages/NotFound";
+import Homepage from './pages/homepage';
+import UserDashboard from './pages/user-dashboard';
 import AuthPage from "./components/AuthPage"; 
-import Coupons from "./components/coupons"; 
 
-// Pages
-import Homepage from "./pages/homepage";
-import UserDashboard from "./pages/user-dashboard";
-import NewAnalysis from "./pages/new-analysis";
-import AnalysisResults from "./pages/analysis-results";
-import NotFound from "./pages/NotFound";
-
+// App Specific Pages (from File 1)
+import SubscriptionTiers from './pages/subscription-tiers';
+import NewAnalysis from './pages/new-analysis';
+import PaymentProcessing from './pages/payment-processing';
+import AnalysisResults from './pages/analysis-results';
+<Route path="/coupons" element={<Coupons />} />
 const Routes = () => {
   return (
     <BrowserRouter>
       <ErrorBoundary>
+        <ScrollToTop />
         <RouterRoutes>
 
-          {/* 1. PUBLIC LANDING & AUTH */}
+          {/* 1. PUBLIC ROUTES */}
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<AuthPage />} />
-
-          {/* 2. CORE PLATFORM FLOW (PHASE 4 MVP) */}
+           <Route path="/coupons" element={<Coupons />} />
+          {/* 2. PROTECTED/INTERNAL ROUTES */}
           <Route path="/user-dashboard" element={<UserDashboard />} />
+          <Route path="/subscription-tiers" element={<SubscriptionTiers />} />
           <Route path="/new-analysis" element={<NewAnalysis />} />
+          <Route path="/payment-processing" element={<PaymentProcessing />} />
           <Route path="/analysis-results" element={<AnalysisResults />} />
-          
-          {/* 3. TOKEN MANAGEMENT (The "Hackathon Translated" Coupon Route) */}
-          <Route path="/redeem-tokens" element={<Coupons />} />
 
-          {/* 4. REDIRECTS & FALLBACKS */}
+          {/* 3. REDIRECTS & ERROR HANDLING */}
+          {/* Redirects /homepage to the dashboard to avoid duplicate content/routes */}
           <Route path="/homepage" element={<Navigate to="/user-dashboard" replace />} />
+          
+          {/* Catch-all for 404 */}
           <Route path="*" element={<NotFound />} />
-
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
