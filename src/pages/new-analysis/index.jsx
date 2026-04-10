@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import 'leaflet/dist/leaflet.css';
 import AuthenticatedSidebar from "../../components/ui/AuthenticatedSidebar";
 import NavigationBreadcrumbs from "../../components/ui/NavigationBreadcrumbs";
 import UserContextMenu from "../../components/ui/UserContextMenu";
