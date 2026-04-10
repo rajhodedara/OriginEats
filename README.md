@@ -14,3 +14,117 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+```
+OriginEats
+├─ eslint.config.js
+├─ index.html
+├─ jsconfig.json
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ public
+│  ├─ assets
+│  │  ├─ favicon.ico
+│  │  └─ images
+│  │     └─ no_image.png
+│  ├─ data
+│  │  ├─ area_summary.csv
+│  │  ├─ bmc_wards.geojson
+│  │  ├─ refine.py
+│  │  ├─ restaurants.csv
+│  │  ├─ restaurants_min.csv
+│  │  ├─ ward_opportunity.csv
+│  │  └─ ward_summary.csv
+│  ├─ favicon.svg
+│  └─ icons.svg
+├─ README.md
+├─ src
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ assets
+│  │  ├─ hero.png
+│  │  ├─ react.svg
+│  │  └─ vite.svg
+│  ├─ components
+│  │  ├─ AppIcon.jsx
+│  │  ├─ AppImage.jsx
+│  │  ├─ AuthPage.jsx
+│  │  ├─ coupons.jsx
+│  │  ├─ ErrorBoundary.jsx
+│  │  ├─ homepage
+│  │  │  └─ components
+│  │  │     ├─ CTASection.jsx
+│  │  │     └─ FAQAccordion.jsx
+│  │  ├─ maps
+│  │  │  ├─ HeatmapLayer.jsx
+│  │  │  ├─ MapFlyTo.jsx
+│  │  │  └─ OpportunityLayer.jsx
+│  │  ├─ ScrollToTop.jsx
+│  │  └─ ui
+│  │     ├─ AuthenticatedSidebar.jsx
+│  │     ├─ Button.jsx
+│  │     ├─ Checkbox.jsx
+│  │     ├─ Input.jsx
+│  │     ├─ NavigationBreadcrumbs.jsx
+│  │     ├─ PublicHeader.jsx
+│  │     ├─ Select.jsx
+│  │     └─ UserContextMenu.jsx
+│  ├─ index.css
+│  ├─ lib
+│  │  └─ supabase.js
+│  ├─ main.jsx
+│  ├─ pages
+│  │  ├─ analysis-results
+│  │  │  ├─ components
+│  │  │  │  ├─ AIRecommendationsSection.jsx
+│  │  │  │  ├─ CompetitorPricingChart.jsx
+│  │  │  │  ├─ CuisineDemandChart.jsx
+│  │  │  │  ├─ ExportActionsBar.jsx
+│  │  │  │  ├─ InteractiveMapSection.jsx
+│  │  │  │  ├─ ProUpgradePrompt.jsx
+│  │  │  │  ├─ RevenuePredictionChart.jsx
+│  │  │  │  └─ SuccessProbabilityCard.jsx
+│  │  │  └─ index.jsx
+│  │  ├─ homepage
+│  │  │  ├─ components
+│  │  │  │  ├─ CTASection.jsx
+│  │  │  │  ├─ FAQAccordion.jsx
+│  │  │  │  ├─ FeatureShowcase.jsx
+│  │  │  │  ├─ Footer.jsx
+│  │  │  │  ├─ HeroSection.jsx
+│  │  │  │  ├─ InteractiveSimulation.jsx
+│  │  │  │  ├─ TestimonialCarousel.jsx
+│  │  │  │  └─ WorkflowVisualization.jsx
+│  │  │  └─ index.jsx
+│  │  ├─ new-analysis
+│  │  │  ├─ components
+│  │  │  │  ├─ AdditionalOptions.jsx
+│  │  │  │  ├─ AnalysisForm.jsx
+│  │  │  │  ├─ BudgetSlider.jsx
+│  │  │  │  ├─ ContextualGuidance.jsx
+│  │  │  │  ├─ CuisineSelector.jsx
+│  │  │  │  └─ LocationSelector.jsx
+│  │  │  └─ index.jsx
+│  │  ├─ NotFound.jsx
+│  │  └─ user-dashboard
+│  │     ├─ components
+│  │     │  ├─ AnalysisHistoryTable.jsx
+│  │     │  ├─ MarketTrendsSnapshot.jsx
+│  │     │  ├─ QuickActionCard.jsx
+│  │     │  ├─ UserStatistics.jsx
+│  │     │  └─ WelcomeSection.jsx
+│  │     └─ index.jsx
+│  ├─ Routes.jsx
+│  ├─ styles
+│  │  ├─ AuthPage.css
+│  │  ├─ index.css
+│  │  └─ tailwind.css
+│  └─ utils
+│     ├─ cn.js
+│     └─ dataLoader.js
+├─ tailwind.config.cjs
+├─ vite.config.js
+└─ vite.config.mjs
+
+```
