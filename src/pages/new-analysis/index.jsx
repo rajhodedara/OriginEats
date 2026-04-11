@@ -78,10 +78,7 @@ const NewAnalysis = () => {
         body: JSON.stringify({
           locality: formData.location,
           cuisine: formData.cuisine,
-
-          // convert ₹ to Lakhs (₹25,00,000 => 25)
           budgetLakhs: formData.budget / 100000,
-
           nearMetro: formData.metroAccess,
           openingTimeline: formData.timeline,
         }),
@@ -139,6 +136,30 @@ const NewAnalysis = () => {
               </p>
             </div>
 
+            {/* 🔥 ENTERPRISE BRIDGE BANNER 🔥 */}
+            <div className="mb-8 p-6 bg-[#0f172a] border border-[#4F46E5] rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-indigo-900/20">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-indigo-400 text-xl">✨</span>
+                  <h3 className="text-white font-bold text-lg md:text-xl tracking-wide">
+                    Enterprise AI Strategy Dashboard
+                  </h3>
+                  <span className="bg-indigo-600/30 text-indigo-300 text-xs px-2 py-1 rounded-full font-mono border border-indigo-500/30">
+                    LLAMA-3 ENABLED
+                  </span>
+                </div>
+                <p className="text-slate-300 text-sm md:text-base max-w-2xl">
+                  Skip the spatial map. Autonomously generate a complete financial, marketing, and competitor roadmap using our advanced LLM reasoning engine.
+                </p>
+              </div>
+              <button 
+                onClick={() => navigate("/business-plan")} 
+                className="w-full md:w-auto bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-bold transition-all shadow-md hover:shadow-indigo-500/50 flex-shrink-0"
+              >
+                Launch Enterprise Mode →
+              </button>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
               <div className="lg:col-span-2">
                 <AnalysisForm
@@ -173,7 +194,7 @@ const NewAnalysis = () => {
 
             <div className="mt-8 md:mt-12 bg-card border border-border rounded-lg p-4 md:p-6">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex-shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 h-16 rounded-full bg-primary/10 flex-shrink-0">
                   <Icon name="Shield" size={24} className="text-primary" />
                 </div>
                 <div className="flex-1">

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes as RouterRoutes, Route, Navigate } from "react-ro
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import Coupons from "./components/coupons";
+import BusinessPlan from "./pages/business-plan";
 
 // Shared Components & Pages
 import NotFound from "pages/NotFound";
@@ -33,6 +34,7 @@ const Routes = () => {
           <Route path="/new-analysis" element={<NewAnalysis />} />
           <Route path="/payment-processing" element={<PaymentProcessing />} />
           <Route path="/analysis-results" element={<AnalysisResults />} />
+          <Route path="/business-plan" element={<BusinessPlan />} />
 
           {/* 3. REDIRECTS & ERROR HANDLING */}
           {/* Redirects /homepage to the dashboard to avoid duplicate content/routes */}
